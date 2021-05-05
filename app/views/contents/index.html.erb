@@ -8,5 +8,6 @@
   <%= content.description %>
   <%= link_to 'Edit', edit_content_path(content) %>
   <%= link_to 'Show', content_path(content) %>
+  <%= link_to 'Delete', content_path(content), method: :delete, data: {confirm: "ARE YOU SURE?"} %>
   </br>
 <% end %>  
