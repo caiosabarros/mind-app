@@ -16,6 +16,8 @@
     
   <% if user_signed_in? %>
     <%= link_to "LogoutBro", destroy_user_session_path, method: :delete %>
+    <%= link_to "Contents", contents_path %>
+    <%= link_to "Home", home_path %>
   <% end %>    
 
     <%= yield %>
