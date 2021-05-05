@@ -6,5 +6,6 @@
 <% @contents.each do |content|%>
   <%= content.title %>
   <%= content.description %>
+  <%= link_to 'Edit', edit_content_path(content) %>
   </br>
 <% end %>  
