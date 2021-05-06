@@ -4,6 +4,12 @@ class ContentsController < ApplicationController
   
   def index
     @contents = current_user.contents
+
+    tag_names = params[:tags]
+
+    if tag_names.present?
+      @contents = @contents.joins(:tags).where(tags: {name: tag_names}).distinct
+    end
   end
 
   def show 
@@ -62,7 +68,7 @@ class ContentsController < ApplicationController
   end
 
   def associate_tags!
-    tags = tags.params.map do |tag_name|
+    tags = tags_params.map do |tag_name|
       current_user.tags.where(name: tag_name).first_or_initialize
     end
 
