@@ -6,23 +6,23 @@
 <%end%>
 
 <%= form_with(model: content, local: true) do |form|%>  
-  <div class="field">
+  <div class="mb-3">
     <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, class: 'form-control'%>
   </div>
 
-  <div class="field">
+  <div class="mb-3">
     <%= form.label :description %>
-    <%= form.text_area :description %>
+    <%= form.text_area :description, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="mb-3">
     <%= form.label :tags %>
-    <%= form.select :tags, options_for_select(current_user.tags.pluck(:name), content.tags.pluck(:name)), {}, {class: 'select2',  multiple: 'multiple', style: 'width: 50%'} %>
+    <%= form.select :tags, options_for_select(current_user.tags.pluck(:name), content.tags.pluck(:name)), {}, {class: 'select2 form-control',  multiple: 'multiple'} %>
   </div>
 
   <div class="actions">
-    <%= form.submit%>
+    <%= form.submit 'Save', class: 'btn btn-primary'%>
   </div>
 
 <% end %>
