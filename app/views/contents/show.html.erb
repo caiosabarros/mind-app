@@ -3,4 +3,4 @@
 </br>
 <h3>Description:</h3>
 <hr>
-<%= @content.description%>
+<%= raw @markdown.render(@content.description)%>
