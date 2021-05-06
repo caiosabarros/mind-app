@@ -16,11 +16,12 @@
     <p class="alert"><%= alert %></p>
       
     <% if user_signed_in? %>
-      <%= link_to "LogoutBro", destroy_user_session_path, method: :delete %>
-      <%= link_to "Contents", contents_path %>
-      <%= link_to "Home", home_path %>
-    <% end %>    
-
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <%= link_to "LogoutBro", destroy_user_session_path, method: :delete, class:'bg-primary badge text-wrap' %>
+        <%= link_to "Contents", contents_path, class:'bg-primary badge text-wrap' %>
+        <%= link_to "Home", home_path, class:'bg-primary badge text-wrap' %>
+      <% end %>    
+      </nav>
       <%= yield %>
     </div>
   </body>

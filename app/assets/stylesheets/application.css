@@ -15,3 +15,11 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  background-color: rgb(43, 226, 156);
+}
+
+.link_too{
+
+}
