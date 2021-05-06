@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+My favorite project till now!
 
-Things you may want to cover:
+Why? Because of the goal: build an application that stores content inside tags for each user.
 
-* Ruby version
+The app is deployed in Heroku:
+https://mind-app-caio-sa.herokuapp.com/
 
-* System dependencies
+I fixed more in my mind the concepts of migrations and was able to dive into many things I didn't know or which are not yet so much clear in my mind. But I've got a lot of progress on my Rails capacity! It was super fun!
 
-* Configuration
+Main gems that we used:
+Devise
+Bootstrap
+RedCarpet
 
-* Database creation
+Things that were difficult for me:
+Enabling the search bar to search for a tag and display only the contents with that tag.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Things that became easy:
+Understanding the MVC workflow!
